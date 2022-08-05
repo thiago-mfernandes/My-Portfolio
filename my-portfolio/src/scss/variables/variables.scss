@@ -1,140 +1,137 @@
 //cores
-$marromTipo: #57504b;
-$marromLinha: rgba(87, 80, 75, 30%);
-$marromAcinzentado: #d3d1ce;
-$verdeTipo: #2f4c39;
-$laranjaPrincipal: #9d4400;
-$bgBotao: #9d9285;
-$bgFooter: #3a3027;
-$rosaPadrao: #deac7f;
-$linkHover: #be7735;
-$linkActive: #f6ddc6;
-$linkVisited: #9d4400;
+
 $branco: #fff;
+$preto: #000000;
+$cinzaDark: #111111;
 
-//familia tipografica dos titulos
-$fonteTitulo: "Finger Paint", cursive;
+$amareloPrimario: #f3c623;
+$amareloSecundario: #fffb37;
 
-$padding-lateral-7: 0 7.5%;
+//familia tipografica
+$fontConteudo: 'Poppins', 'Arial', sans-serif;
+$fontTitulos: 'Abril Fatface', cursive;
 
-$transition: all 0.8s ease-in-out;
+
+$transition: all 0.6s ease-in-out;
 
 //border-radius 50%
 $roundEdge: 50%;
 
 $borderRadius-4: 4px;
 $borderRadius-8: 8px;
+$borderRadius-16: 16px;
+$borderRadius-24: 24px;
+$borderRadius-32: 32px;
 
 
 $boxShadow-8: 4px 4px 4px 0 rgba(0, 0, 0, 8%);
 $boxShadow-24: 8px 8px 8px rgba(0, 0, 0, 24%);
 
-$bordaCard: 1px solid $laranjaPrincipal;
 
 // margin-top e padding-top:
-$m-t-0: 0%;
-$m-t-2: 2.5%;
-$m-t-5: 5%;
-$m-t-7: 7.5%;
-$m-t-10: 10%;
-$m-t-12: 12.5%;
-$m-t-15: 15%;
-$m-t-20: 20%;
-$m-t-30: 30%;
-$m-t-50: 50%;
-$m-t-75: 75%;
-$m-t-100: 100%;
+$mt0: 0%;
+$mt2: 2.5%;
+$mt5: 5%;
+$mt7: 7.5%;
+$mt10: 10%;
+$mt12: 12.5%;
+$mt15: 15%;
+$mt20: 20%;
+$mt30: 30%;
+$mt50: 50%;
+$mt75: 75%;
+$mt100: 100%;
 
-$p-t-0: 0%;
-$p-t-2: 2.5%;
-$p-t-5: 5%;
-$p-t-7: 7.5%;
-$p-t-10: 10%;
-$p-t-12: 12.5%;
-$p-t-15: 15%;
-$p-t-20: 20%;
-$p-t-30: 30%;
-$p-t-50: 50%;
-$p-t-75: 75%;
-$p-t-100: 100%;
+$pt0: 0%;
+$pt2: 2.5%;
+$pt5: 5%;
+$pt7: 7.5%;
+$pt10: 10%;
+$pt12: 12.5%;
+$pt15: 15%;
+$pt20: 20%;
+$pt30: 30%;
+$pt50: 50%;
+$pt75: 75%;
+$pt100: 100%;
 
-//margin-bottom e padding-bottom:
-$m-b-0: 0%;
-$m-b-2: 2.5%;
-$m-b-5: 5%;
-$m-b-7: 7.5%;
-$m-b-10: 10%;
-$m-b-12: 12.5%;
-$m-b-15: 15%;
-$m-b-20: 20%;
-$m-b-30: 30%;
-$m-b-50: 50%;
-$m-b-75: 75%;
-$m-b-100: 100%;
+//marginbottom e paddingbottom:
+$mb0: 0%;
+$mb2: 2.5%;
+$mb5: 5%;
+$mb7: 7.5%;
+$mb10: 10%;
+$mb12: 12.5%;
+$mb15: 15%;
+$mb20: 20%;
+$mb30: 30%;
+$mb50: 50%;
+$mb75: 75%;
+$mb100: 100%;
 
-$p-b-0: 0%;
-$p-b-2: 2.5%;
-$p-b-5: 5%;
-$p-b-7: 7.5%;
-$p-b-10: 10%;
-$p-b-12: 12.5%;
-$p-b-15: 15%;
-$p-b-20: 20%;
-$p-b-30: 30%;
-$p-b-50: 50%;
-$p-b-75: 75%;
-$p-b-100: 100%;
+$pb0: 0%;
+$pb2: 2.5%;
+$pb5: 5%;
+$pb7: 7.5%;
+$pb10: 10%;
+$pb12: 12.5%;
+$pb15: 15%;
+$pb20: 20%;
+$pb30: 30%;
+$pb50: 50%;
+$pb75: 75%;
+$pb100: 100%;
 
-//margin-left e padding left:
-$m-l-0: 0%;
-$m-l-2: 2.5%;
-$m-l-5: 5%;
-$m-l-7: 7.5%;
-$m-l-10: 10%;
-$m-l-12: 12.5%;
-$m-l-15: 15%;
-$m-l-20: 20%;
-$m-l-30: 30%;
-$m-l-50: 50%;
-$m-l-75: 75%;
-$m-l-100: 100%;
+//marginleft e padding left:
+$ml0: 0%;
+$ml2: 2.5%;
+$ml5: 5%;
+$ml7: 7.5%;
+$ml10: 10%;
+$ml12: 12.5%;
+$ml15: 15%;
+$ml20: 20%;
+$ml30: 30%;
+$ml50: 50%;
+$ml75: 75%;
+$ml100: 100%;
 
-$p-l-0: 0%;
-$p-l-2: 2.5%;
-$p-l-5: 5%;
-$p-l-7: 7.5%;
-$p-l-10: 10%;
-$p-l-12: 12.5%;
-$p-l-15: 15%;
-$p-l-20: 20%;
-$p-l-30: 30%;
-$p-l-50: 50%;
-$p-l-75: 75%;
-$p-l-100: 100%;
+$pl0: 0%;
+$pl2: 2.5%;
+$pl5: 5%;
+$pl7: 7.5%;
+$pl10: 10%;
+$pl12: 12.5%;
+$pl15: 15%;
+$pl20: 20%;
+$pl30: 30%;
+$pl50: 50%;
+$pl75: 75%;
+$pl100: 100%;
 
-//margin-right e padding-right:
-$m-r-0: 0%;
-$m-r-2: 2.5%;
-$m-r-5: 5%;
-$m-r-7: 7.5%;
-$m-r-10: 10%;
-$m-r-12: 12.5%;
-$m-r-15: 15%;
-$m-r-20: 20%;
-$m-r-30: 30%;
-$m-r-50: 50%;
-$m-r-75: 75%;
-$m-r-100: 100%;
+//marginright e paddingright:
+$mr0: 0%;
+$mr2: 2.5%;
+$mr5: 5%;
+$mr7: 7.5%;
+$mr10: 10%;
+$mr12: 12.5%;
+$mr15: 15%;
+$mr20: 20%;
+$mr30: 30%;
+$mr50: 50%;
+$mr75: 75%;
+$mr100: 100%;
 
-$p-r-0: 0%;
-$p-r-2: 2.5%;
-$p-r-5: 5%;
-$p-r-7: 7.5%;
-$p-r-10: 10%;
-$p-r-12: 12.5%;
-$p-r-15: 15%;
-$p-r-20: 20%;
-$p-r-30: 30%;
-$p-r-50: 50%;
-$p-r-75: 75%;
-$p-r-100: 100%;
+$pr0: 0%;
+$pr2: 2.5%;
+$pr5: 5%;
+$pr7: 7.5%;
+$pr10: 10%;
+$pr12: 12.5%;
+$pr15: 15%;
+$pr20: 20%;
+$pr30: 30%;
+$pr50: 50%;
+$pr75: 75%;
+$pr100: 100%;

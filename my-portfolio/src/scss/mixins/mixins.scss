@@ -39,7 +39,7 @@
   }
 }
 
-@mixin alignItens-justifyContent($align: null, $justify: null) {
+@mixin alignItems-justifyContent($align: null, $justify: null) {
   @if ($align != null) {
     align-items: $align;
   }
