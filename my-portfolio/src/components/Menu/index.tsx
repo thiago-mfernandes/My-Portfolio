@@ -1,30 +1,38 @@
-import Tag from 'components/Tag';
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { GrClose } from 'react-icons/gr';
 import styles from './Menu.module.scss';
 
 function Menu() {
+
+  const[menuMobileState, setMenuMobileState] = useState(false);
+  
   return (
     <>
-      <div className={styles.hamburguer}>
-        <FaBars className={styles.hamburguer__icon}/>
+      <div 
+        onClick={() => setMenuMobileState(!menuMobileState)}
+        className={styles.hamburguer}
+      >
+        {menuMobileState 
+          ? <GrClose className={styles.hamburguer__icon}/>
+          : <FaBars className={styles.hamburguer__icon}/>
+        }        
       </div>
 
       <aside className={styles.menu}>
-        <h1 className={styles.menu__title}>
-          <Tag value='Bem Vindo' class={`${styles.menu__title}`}/>
-          <a href="">&lt;p&gt; Bem Vindo&lt;p/&gt;</a>
+        <h1 className={styles.menu__welcome}>
+          <a href="">Bem Vindo!</a>
         </h1>          
-        <p>Thiago Fernandes</p>
-        <p>Desenvolvedor Front-End</p>
+        <p className={styles.menu__content}>Thiago Fernandes</p>
+        <p className={styles.menu__content}>Desenvolvedor Front-End</p>
         <nav>
           <ul>
-            <li>&lt;Home/&gt;</li>
-            <li>&lt;Sobre/&gt;</li>
-            <li>&lt;Portfolio/&gt;</li>
-            <li>&lt;Educação/&gt;</li>
-            <li>&lt;Experiencia/&gt;</li>
-            <li>&lt;Contato/&gt;</li>
+            <li>Home</li>
+            <li>Sobre</li>
+            <li>Portfolio</li>
+            <li>Educação</li>
+            <li>Experiencia</li>
+            <li>Contato</li>
           </ul>
         </nav>
         <button>Baixar Currículo</button>

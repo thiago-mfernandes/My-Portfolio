@@ -9,26 +9,43 @@
   padding: 2.5%;
   background-color: $amareloPrimario;
   border-radius: $borderRadius-4;
+  cursor: pointer;
 
-  &__icon{
-    @include color-fontSize($branco, 1.5rem);
+  &__icon {
+    @include color-fontSize($preto, 1.5rem);
   }
 }
 
 .menu {
-  background: url(../../assets/aside.png) no-repeat right top $preto;
+  @include height-width(100vh, 75%);
+  background: url(../../assets/aside.png) no-repeat right top $preto ;
   padding: 5%;
   overflow-y: hidden;
-  @include height-width(100vh, 75%);
   z-index: 1000;
 
-  &__title {
-    margin-top: $mt30;
-    color: $amareloPrimario;
-
+  &__welcome {    
     & a {
       @extend .titleh1;
+      margin-top: $mt30;
       text-decoration: none;
+      background-image: url(../../assets/bg_1.jpg);
+      overflow: hidden;
+      display: inline-block;
+      text-align: left;
+      //propriedade que faz o efeito de mascara no texto
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
     }
+  }
+
+  &__title {
+    @extend .titleh1;
+    @include display-flexDirection(flex, column);
+    @include alignItems-justifyContent(flex-start, center);
   }
 }
