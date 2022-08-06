@@ -1,15 +1,36 @@
 @import '../../scss/styles.scss';
 
-.hamburguer {
+.hamburguerOpen {
   @include alignItems-justifyContent(center, center);
   @include display-flexDirection(flex, row);
   position: absolute;
-  left: 30px;
-  top: 30px;
+  left: 160px;
+  top: 16px;
   padding: 2.5%;
   background-color: $amareloPrimario;
   border-radius: $borderRadius-4;
   cursor: pointer;
+  z-index: 1000;
+  transition: all 0.6s ease-in-out .2s;
+
+  &__icon {
+    @include color-fontSize($preto, 1.5rem);
+  }
+}
+
+.hamburguerClose {
+  @include alignItems-justifyContent(center, center);
+  @include display-flexDirection(flex, row);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 2.5%;
+  background-color: $amareloPrimario;
+  border-radius: $roundEdge;
+  transform: rotateZ(360deg);
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.6s ease-in-out;
 
   &__icon {
     @include color-fontSize($preto, 1.5rem);
@@ -17,35 +38,84 @@
 }
 
 .menu {
+  @include alignItems-justifyContent(flex-start, space-between);
+  @include display-flexDirection(flex, column);
   @include height-width(100vh, 75%);
   background: url(../../assets/aside.png) no-repeat right top $preto ;
-  padding: 5%;
+  padding: 15% 5%;
   overflow-y: hidden;
-  z-index: 1000;
+  transform: translateX(0vh);
+  transition: all .5s ease-in;
+  z-index: 10;
 
-  &__welcome {    
-    & a {
+  &__container {
+    @include alignItems-justifyContent(flex-start, center);
+    @include display-flexDirection(flex, column);
+    width: 100%;
+
+    &___welcome {    
+      & a {
+        @extend .titleh1;
+        margin-top: $mt10;
+        text-decoration: none;
+        background-image: url(../../assets/bg_1.jpg);
+        overflow: hidden;
+        display: inline-block;
+        text-align: left;
+        //propriedade que faz o efeito de mascara no texto
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  
+    &___title {
       @extend .titleh1;
-      margin-top: $mt30;
-      text-decoration: none;
-      background-image: url(../../assets/bg_1.jpg);
-      overflow: hidden;
-      display: inline-block;
-      text-align: left;
-      //propriedade que faz o efeito de mascara no texto
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
+      @include display-flexDirection(flex, column);
+      @include alignItems-justifyContent(flex-start, center);
+    }
+  
+    &___content {
+      @extend .content;
+      &:last-of-type {
+        margin-bottom: $mb2;
+      }
+    }
+
+    &___button {
+      @extend .button;
     }
   }
+}
 
-  &__title {
-    @extend .titleh1;
+.menuClose {
+  @include alignItems-justifyContent(flex-start, space-between);
+  @include display-flexDirection(flex, column);
+  @include height-width(100vh, 75%);
+  background: url(../../assets/aside.png) no-repeat right top $preto ;
+  padding: 15% 5%;
+  overflow-y: hidden;
+  transform: translateX(-100vh);
+  transition: all .5s ease-in;
+  z-index: 10;
+}
+
+.nav {
+  width: 100%;
+  margin-bottom: $mb10;
+
+  &__list {
     @include display-flexDirection(flex, column);
     @include alignItems-justifyContent(flex-start, center);
+    @include height-width(fit-content, 100%);
+
+    &___item {
+      width: 100%;
+      padding: 2.5% 0;
+    }
   }
 }

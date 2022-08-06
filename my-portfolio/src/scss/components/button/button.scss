@@ -1,0 +1,14 @@
+@import '../../variables/variables.scss','../../mixins/mixins.scss';
+
+.button {
+  @include color-fontSize($preto, 0.850rem);
+  @include height-width(40px, 80%);
+  background-color: $amareloPrimario;
+  border-radius: $borderRadius-24;
+  border: $borderLine;
+  padding: 0.375rem 0.850rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: $mb5;
+  
+}
