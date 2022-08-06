@@ -6,9 +6,21 @@
   background-color: $amareloPrimario;
   border-radius: $borderRadius-24;
   border: $borderLine;
+  cursor: pointer;
   padding: 0.375rem 0.850rem;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: $mb5;
   
+}
+
+.buttonPortfolio {
+  border: $borderLine;
+  border-radius: $borderRadius-4;
+  background-color: transparent;
+  color: $amareloPrimario;
+  cursor: pointer;
+  padding: 2%;
+  margin: 0 auto;
+  @include height-width(6vh, 75%)
 }

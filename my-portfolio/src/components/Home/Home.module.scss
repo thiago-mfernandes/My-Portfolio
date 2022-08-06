@@ -1,1 +1,67 @@
-@import '../../scss/styles.scss';
+@import "../../scss/styles.scss";
+
+.home {
+  width: 100%;
+  @include alignItems-justifyContent(center, center);
+  @include display-flexDirection(flex, column);
+  padding: 0 5%;
+
+  &__container {
+    width: 100%;
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, column);
+
+    overflow-x: hidden;
+
+    &___img {
+      @include height-width(100vh, 100vw);
+      background-image: url(../../assets/campeao.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &__containerTitle {
+    @include alignItems-justifyContent(flex-start, center);
+    @include display-flexDirection(flex, column);
+    padding: 20% 10%;
+
+    &___content {
+      @extend .content;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    &___title {
+      @extend .titleh2;
+      margin-bottom: $mb20;
+    }
+
+    &___contentBox {
+      padding-left: $pl10;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 2px;
+        height: 40px;
+        border-radius: 20px;
+        content: "";
+        background: #f3c623;
+      }
+
+      &____content {
+        @extend .content;
+        font-size: 1rem;
+        margin-bottom: $mb10;
+      }
+    }
+
+    &___btn {
+      @extend .buttonPortfolio;
+    }
+  }
+}

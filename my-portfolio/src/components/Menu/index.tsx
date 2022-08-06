@@ -2,8 +2,7 @@ import { memo, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import styles from './Menu.module.scss';
-//menu true icone fechar - classOpen
-//menu false icone hamburguer - classClose
+
 function Menu() {
 
   const[menuMobileState, setMenuMobileState] = useState(false);

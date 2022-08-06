@@ -4,14 +4,14 @@
   @include alignItems-justifyContent(center, center);
   @include display-flexDirection(flex, row);
   position: absolute;
-  left: 160px;
+  left: 170px;
   top: 16px;
   padding: 2.5%;
   background-color: $amareloPrimario;
   border-radius: $borderRadius-4;
   cursor: pointer;
   z-index: 1000;
-  transition: all 0.6s ease-in-out .2s;
+  transition: $transition6 .2s;
 
   &__icon {
     @include color-fontSize($preto, 1.5rem);
@@ -30,7 +30,7 @@
   transform: rotateZ(360deg);
   cursor: pointer;
   z-index: 1000;
-  transition: all 0.6s ease-in-out;
+  transition: $transition6;
 
   &__icon {
     @include color-fontSize($preto, 1.5rem);
@@ -45,7 +45,8 @@
   padding: 15% 5%;
   overflow-y: hidden;
   transform: translateX(0vh);
-  transition: all .5s ease-in;
+  transition: $transition5;
+  @extend .fixed-top;
   z-index: 10;
 
   &__container {
@@ -56,20 +57,22 @@
     &___welcome {    
       & a {
         @extend .titleh1;
-        margin-top: $mt10;
-        text-decoration: none;
-        background-image: url(../../assets/bg_1.jpg);
-        overflow: hidden;
-        display: inline-block;
-        text-align: left;
         //propriedade que faz o efeito de mascara no texto
+        background-clip: text;
+        background-image: url(../../assets/bg_1.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: inline-block;
+        margin-top: $mt10;
+        overflow: hidden;
+        text-align: left;
+        text-decoration: none;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
       }
     }
   
@@ -93,6 +96,7 @@
 }
 
 .menuClose {
+  @extend .fixed-top;
   @include alignItems-justifyContent(flex-start, space-between);
   @include display-flexDirection(flex, column);
   @include height-width(100vh, 75%);
@@ -100,7 +104,7 @@
   padding: 15% 5%;
   overflow-y: hidden;
   transform: translateX(-100vh);
-  transition: all .5s ease-in;
+  transition: $transition5;
   z-index: 10;
 }
 
