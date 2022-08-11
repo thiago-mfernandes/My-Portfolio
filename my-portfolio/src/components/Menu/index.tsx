@@ -30,8 +30,6 @@ function Menu() {
           <h1 className={styles.menu__container___welcome}>
             <a className={styles.menu__title}href="">Bem Vindo!</a>
           </h1>
-          <p className={styles.menu__container___content}>Thiago Fernandes</p>
-          <p className={styles.menu__container___content}>Desenvolvedor Front-End</p>
         </div>
         <nav className={styles.nav}>
           <ul className={styles.nav__list}>

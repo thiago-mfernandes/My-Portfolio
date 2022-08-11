@@ -1,0 +1,7 @@
+@import '../../variables/variables.scss','../../mixins/mixins.scss';
+
+.container {
+  @include alignItems-justifyContent(center, center);
+  @include display-flexDirection(flex, column);
+  width: 100%;
+}

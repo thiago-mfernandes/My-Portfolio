@@ -7,9 +7,7 @@
   padding: 0 5%;
 
   &__container {
-    width: 100%;
-    @include alignItems-justifyContent(center, center);
-    @include display-flexDirection(flex, column);
+    @extend .container;
 
     overflow-x: hidden;
 
