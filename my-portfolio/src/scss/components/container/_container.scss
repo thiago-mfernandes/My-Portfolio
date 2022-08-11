@@ -5,3 +5,10 @@
   @include display-flexDirection(flex, column);
   width: 100%;
 }
+
+.sectionContainer {
+  @include alignItems-justifyContent(center, center);
+  @include display-flexDirection(flex, column);
+  width: 100%;
+  padding: 0 5%;
+}

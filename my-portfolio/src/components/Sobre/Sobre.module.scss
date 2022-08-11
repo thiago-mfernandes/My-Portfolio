@@ -1,8 +1,7 @@
 @import '../../scss/styles.scss';
 
 .about {
-  @include alignItems-justifyContent(center, center);
-  @include display-flexDirection(flex, column);
+  @extend .sectionContainer;
 
   &__imgAbout {
     width: 100%;

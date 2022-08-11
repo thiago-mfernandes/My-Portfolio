@@ -1,6 +1,7 @@
 import styles from './Home.module.scss';
 
-export default function Home() {
+export default function Portfolio
+() {
   return (
     <>
       <section className={styles.home}> {/* secao que engloba todos os projetos */}

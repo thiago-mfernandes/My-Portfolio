@@ -1,6 +1,5 @@
 import styles from './Sobre.module.scss';
 import Me from 'assets/campeao.jpg';
-
 import data from './data.json';
 
 export default function Sobre() {

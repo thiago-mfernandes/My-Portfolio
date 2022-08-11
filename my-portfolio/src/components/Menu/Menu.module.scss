@@ -3,15 +3,16 @@
 .hamburguerOpen {
   @include alignItems-justifyContent(center, center);
   @include display-flexDirection(flex, row);
-  position: absolute;
-  left: 170px;
-  top: 16px;
-  padding: 2.5%;
   background-color: $amareloPrimario;
   border-radius: $borderRadius-4;
   cursor: pointer;
-  z-index: 1000;
+  left: 170px;
+  padding: 2.5%;
+  position: sticky;
+  top: 16px;
   transition: $transition6 .2s;
+  width: 10%;
+  z-index: 1000;
 
   &__icon {
     @include color-fontSize($preto, 1.5rem);
@@ -21,16 +22,17 @@
 .hamburguerClose {
   @include alignItems-justifyContent(center, center);
   @include display-flexDirection(flex, row);
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  padding: 2.5%;
   background-color: $amareloPrimario;
   border-radius: $roundEdge;
-  transform: rotateZ(360deg);
   cursor: pointer;
-  z-index: 1000;
+  left: 16px;
+  padding: 2.5%;
+  position: sticky;
+  top: 16px;
+  transform: rotateZ(360deg);
   transition: $transition6;
+  width: 10%;
+  z-index: 1000;
 
   &__icon {
     @include color-fontSize($preto, 1.5rem);
@@ -44,8 +46,10 @@
   background: url(../../assets/aside.png) no-repeat right top $preto ;
   padding: 15% 5%;
   overflow-y: hidden;
+  position: fixed;
   transform: translateX(0vh);
   transition: $transition5;
+  top: 0px;
   @extend .fixed-top;
   z-index: 10;
 
@@ -103,8 +107,10 @@
   background: url(../../assets/aside.png) no-repeat right top $preto ;
   padding: 15% 5%;
   overflow-y: hidden;
+  position: fixed;
   transform: translateX(-100vh);
   transition: $transition5;
+  top: 0px;
   z-index: 10;
 }
 
