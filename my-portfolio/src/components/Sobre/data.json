@@ -1,0 +1,37 @@
+[
+  {
+    "src": "assets/stacks/react.png",
+    "alt": "Ícone React",
+    "content": "React"
+  },
+  {
+    "src": "assets/stacks/typescript.png",
+    "alt": "Ícone Typescript",
+    "content": "Typescript"
+  },
+  {
+    "src": "assets/stacks/js.png",
+    "alt": "Ícone Javascript",
+    "content": "Javascript"
+  },
+  {
+    "src": "assets/stacks/sass.png",
+    "alt": "Ícone Sass",
+    "content": "Sass"
+  },
+  {
+    "src": "assets/stacks/git.png",
+    "alt": "Ícone Git",
+    "content": "Git"
+  },
+  {
+    "src": "assets/stacks/css3.png",
+    "alt": "Ícone Css3",
+    "content": "Css3"
+  },
+  {
+    "src": "assets/stacks/html.png",
+    "alt": "Ícone HTML5",
+    "content": "HTML5"
+  }
+]

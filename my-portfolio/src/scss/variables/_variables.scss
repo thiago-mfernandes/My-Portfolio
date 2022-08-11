@@ -62,6 +62,9 @@ $borderLine: 1px solid $amareloPrimario;
 $boxShadow-8: 4px 4px 4px 0 rgba(0, 0, 0, 8%);
 $boxShadow-24: 8px 8px 8px rgba(0, 0, 0, 24%);
 
+//filtro para hover
+$filtroStacks: invert(80%) sepia(82%) saturate(1904%) hue-rotate(338deg) brightness(99%) contrast(90%);
+
 
 // margin-top e padding-top:
 $mt0: 0%;

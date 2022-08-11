@@ -44,7 +44,12 @@
         margin: 7.5% 0;
 
         &_____icon {
+          transition: $transition5;
           width: 50%;
+          &:hover {
+            filter: $filtroStacks;
+            transition: $transition5;
+          }
         }
 
         &_____subtitle {
