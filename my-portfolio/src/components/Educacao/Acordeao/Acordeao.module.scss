@@ -9,7 +9,7 @@
     @include display-flexDirection(flex, row);
     @include alignItems-justifyContent(center, center);
     background-color: $cinzaBoxEducacao;
-    border: 1px solid $gray-800;
+    border: $borderBoxs;
     padding: 2.5%;
     margin: 4px 0;
     transition: $transition6;

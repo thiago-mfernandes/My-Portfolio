@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Desenvolvedor Front-End",
+    "subtitle": "jul 2022",
+    "description": "Desenvolvendo websites para clientes de diferentes segmentos e propostas utilizando React.JS e Typescript, Sass, CSS e HTML. Versionamento de códigos no Git/Github. Todas as aplicações estão sendo desenvolvidades manualmente de forma personalizada!"
+  },
+  {
+    "title": "Fungicultor",
+    "subtitle": "ago de 2018 - jul de 2022",
+    "description": "Construção e manutenção de estufa especifica para o cultivo de cogumelos Pleurotus. Manejo da produção, colheita, higienização e venda. Cultivamos anualmente cerca de 6000 kgs, abastecendo o comercio local e consumidor final."
+  },
+  {
+    "title": "Tatuador",
+    "subtitle": "mar de 2014 - jun de 2018",
+    "description": "Tatuador especializado no estilo Aquarela."
+  },
+  {
+    "title": "Inspetor de controle de qualidade Junior",
+    "subtitle": "mai de 2013 - fev de 2014",
+    "description": "Inspetor de qualidade de Etanol do tipo Exportação. Atuava no carregamento de Etanol que seria transportado até o porto, realizava coleta e analise do combustível e análise de limpeza dos caminhões. Função exercida nas usinas do estado de São Paulo, Minas Gerais e Goiás."
+  },
+  {
+    "title": "Ajustador Montador",
+    "subtitle": "nov de 2006 - mar de 2009",
+    "description": "Soldador de Camisas de Moenda do setor Sucroalcooleiro."
+  }
+]

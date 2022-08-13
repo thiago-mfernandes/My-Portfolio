@@ -1,0 +1,76 @@
+@import "../../../scss/styles.scss";
+
+.container {
+  @include display-flexDirection(flex, row);
+  position: relative;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  clear: both;
+  width: 90%;
+  &:hover .container__boxIcon {
+    box-shadow: $boxShadowSpecial;
+    transition: $transition5;
+    & svg {
+      filter: $filtroIconJobAmarelo;
+      transition: $transition5;
+    }
+  }
+
+  &__boxIcon {
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, row);
+    @include height-width(50px, 50px);
+    position: relative;
+    margin-left: -25px;
+    border: 4px solid $gray-800;
+    border-radius: $roundEdge;
+    background-color: $cinzaBoxEducacao;
+    align-self: flex-start;
+    transition: $transition5;
+
+    &___icon {
+      font-size: 1.25rem;
+      filter: $filtroIconJobCinza;
+    }
+  }
+
+  &__boxDescription {
+    @include alignItems-justifyContent(flex-start, center);
+    @include display-flexDirection(flex, column);
+    background-color: $cinzaBoxEducacao;
+    border: $borderBoxs;
+    position: relative;
+    padding: 5%;
+    margin-left: $ml10;
+    width: calc(100% - 50px);
+    height: 100%;
+    &::before {
+      @include height-width(15px, 15px);
+      background-color: $gray-800;
+      content: "";
+      display: block;
+      left: -24px;
+      position: relative;
+      transform: rotate(45deg);
+      top: 0px;
+      transition: $transition5;
+      z-index: -1
+    }
+
+    &___title {
+      @extend .titleh3;
+    }
+
+    &___subTitle {
+      @extend .subtitle;
+      text-align: left;
+      margin-bottom: $mb15;
+    }
+
+    &___content {
+      @extend .content;
+      font-size: 0.75rem;
+    }
+  }
+}

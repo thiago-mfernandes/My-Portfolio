@@ -9,6 +9,10 @@
   @include color-fontSize($branco, 1.75rem);
 }
 
+.titleh3 {
+  @include color-fontSize($branco, 1.25rem);
+}
+
 .subtitle {
   @include color-fontSize($preto50, 0.75rem);
   font-family: $fontConteudo;
