@@ -1,4 +1,4 @@
-@import '../../scss/styles.scss';
+@import "../../scss/styles.scss";
 
 .educacao {
   @extend .sectionContainer;
@@ -6,89 +6,21 @@
   &__box {
     @extend .container;
     align-items: flex-start;
+    margin-bottom: $mb10;
 
     &___subtitle {
       @extend .subtitle;
       margin: 0;
+      margin-top: $mt5;
       text-align: start;
     }
 
     &___title {
       @extend .titleh2;
-      margin-bottom: $mb15;
-    }
-
-    &___card {
-      @include display-flexDirection(flex, column);
-      @include alignItems-justifyContent(center, center);
-      width: 100%;
-      
-      &____boxFaqInative {
-        @include display-flexDirection(flex, row);
-        @include alignItems-justifyContent(center, center);
-        background-color: $cinzaBoxEducacao;
-        border: 1px solid $gray-800;
-        padding: 2.5%;
-        margin: 4px 0;
-        transition: $transition6;
-        width: 100%;
-      }
-
-      &____boxFaqActive {
-        @include display-flexDirection(flex, row);
-        @include alignItems-justifyContent(center, center);
-        background-color: $amareloPrimario;
-        border: 1px solid $gray-800;
-        padding: 2.5%;
-        margin: 4px 0;
-        transition: $transition6;
-        width: 100%;
-
-        & h3 {
-          color: $dark;
-          transition: $transition6;
-        }
-      }
-
-      &____boxFaqContentClose {
-        background-color: $cinzaBoxEducacao;
-        border: 0px solid $gray-800;
-        max-height: 0vh;
-        overflow: hidden;
-        // o alvo da transição precisa ser especificamente o max-height com overflow: hidden
-        transition: max-height 650ms ease;
-      }
-
-      &____boxFaqContentOpen {
-        @include display-flexDirection(flex, row);
-        @include alignItems-justifyContent(center, center);
-        background-color: $cinzaBoxEducacao;
-        border: 1px solid $gray-800;
-        max-height: 30vh;
-        overflow: hidden;
-        width: 100%;
-        // o alvo da transição precisa ser especificamente o max-height com overflow: hidden
-        transition: max-height 650ms ease;
-
-        &_____content{
-          @extend .content;
-          font-size: 0.75rem;
-          padding: 2.5%;
-        }
+      margin-bottom: $mb10;
+      &:last-of-type {
+        margin-top: $mt7;
       }
     }
   }
 }
-
-.icon {
-  color: $preto50;
-  font-size: 1.35rem;
-  margin: 2.5%;
-}
-
-.iconActive {
-  color: $dark;
-  font-size: 1.35rem;
-  margin: 2.5%;
-}
-

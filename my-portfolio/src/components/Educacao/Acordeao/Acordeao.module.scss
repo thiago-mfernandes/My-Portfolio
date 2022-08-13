@@ -1,0 +1,87 @@
+@import "../../../scss/styles.scss";
+
+.acordeao {
+  @include display-flexDirection(flex, column);
+  @include alignItems-justifyContent(center, center);
+  width: 100%;
+
+  &__cardTitleInative {
+    @include display-flexDirection(flex, row);
+    @include alignItems-justifyContent(center, center);
+    background-color: $cinzaBoxEducacao;
+    border: 1px solid $gray-800;
+    padding: 2.5%;
+    margin: 4px 0;
+    transition: $transition6;
+    width: 100%;
+
+    & h3 {
+      @extend .subtitle;
+      margin: 0;
+      text-align: start;
+      color: $preto50;
+      transition: $transition6;
+    }
+  }
+
+  &__cardTitleActive {
+    @include display-flexDirection(flex, row);
+    @include alignItems-justifyContent(center, center);
+    background-color: $amareloPrimario;
+    border: 1px solid $gray-800;
+    padding: 2.5%;
+    margin: 4px 0;
+    transition: $transition6;
+    width: 100%;
+
+    & h3 {
+      @extend .subtitle;
+      margin: 0;
+      text-align: start;
+      color: $dark;
+      transition: $transition6;
+      width: 100%;
+    }
+  }
+
+  &__cardFaqContentClose {
+    background-color: $cinzaBoxEducacao;
+    border: 0px solid $gray-800;
+    max-height: 0vh;
+    overflow: hidden;
+    // o alvo da transição precisa ser especificamente o max-height com overflow: hidden
+    transition: max-height 650ms ease;
+    width: 100%;
+  }
+
+  &__cardFaqContentOpen {
+    @include display-flexDirection(flex, row);
+    @include alignItems-justifyContent(center, center);
+    background-color: $cinzaBoxEducacao;
+    border: 1px solid $gray-800;
+    max-height: 50vh;
+    overflow: hidden;
+    width: 100%;
+    // o alvo da transição precisa ser especificamente o max-height com overflow: hidden
+    transition: max-height 650ms ease;
+
+    &___content {
+      @extend .content;
+      font-size: 0.75rem;
+      padding: 2.5%;
+      width: 100%;
+    }
+  }
+}
+
+.icon {
+  color: $preto50;
+  font-size: 1.35rem;
+  margin: 2.5%;
+}
+
+.iconActive {
+  color: $dark;
+  font-size: 1.35rem;
+  margin: 2.5%;
+}
