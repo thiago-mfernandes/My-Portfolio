@@ -1,6 +1,6 @@
 import styles from './Sobre.module.scss';
 import Me from 'assets/campeao.jpg';
-import data from './data.json';
+import stacks from 'data/stacks.json';
 
 export default function Sobre() {
   return (
@@ -20,7 +20,7 @@ export default function Sobre() {
             </h2>
 
             {
-              data.map((item, index) => (
+              stacks.map((item, index) => (
                 <div 
                   key={index}
                   className={styles.about__container___containerStacks____card}
