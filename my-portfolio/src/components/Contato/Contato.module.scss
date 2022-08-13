@@ -1,1 +1,67 @@
-@import '../../scss/styles.scss';
+@import "../../scss/styles.scss";
+
+.container {
+  @extend .sectionContainer;
+  margin-top: $mt20;
+
+  &__formBox {
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, column);
+
+    &___title {
+      @extend .titleh2;
+      margin-bottom: $mb15;
+    }
+
+    &___form {
+      @include alignItems-justifyContent(center, center);
+      @include display-flexDirection(flex, column);
+      width: 100%;
+
+      &____boxInput {
+        @include alignItems-justifyContent(flex-start, center);
+        @include display-flexDirection(flex, column);
+        width: 100%;
+        margin-bottom: $mb10;
+
+        &_____label {
+          @extend .content;
+          font-size: 0.850rem;
+          text-transform: uppercase;
+          width: 100%;
+        }
+
+        &_____input {
+          @include height-width(50px, 100%);
+          border: none;
+          background: transparent;
+          border-bottom: $borderBoxs;
+          color: $preto50;
+          outline: none;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+
+  &__socialMedia {
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, column);
+    background-color: $amareloPrimario;
+    padding: 5%;
+
+    &___title {
+      @extend .titleh2;
+      color: $cinzaBoxEducacao;
+      margin: 10% 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    &___content {
+      @extend .content;
+      color: $cinzaBoxEducacao;
+      text-align: justify;
+    }
+  }
+}
