@@ -19,3 +19,9 @@ export interface AcordionState {
   d8?: string,
   d9?: string
 }
+
+export interface IContatoInfo {
+  icon: string,
+  title: string,
+  content: string
+}

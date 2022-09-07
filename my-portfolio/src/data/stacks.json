@@ -15,6 +15,16 @@
     "content": "Javascript"
   },
   {
+    "src": "assets/stacks/nodejs.png",
+    "alt": "Ícone Node.JS",
+    "content": "Node.JS"
+  },
+  {
+    "src": "assets/stacks/next.png",
+    "alt": "Ícone Next.JS",
+    "content": "Next.JS"
+  },
+  {
     "src": "assets/stacks/sass.png",
     "alt": "Ícone Sass",
     "content": "Sass"

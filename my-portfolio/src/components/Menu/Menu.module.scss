@@ -6,12 +6,13 @@
   background-color: $amareloPrimario;
   border-radius: $borderRadius-4;
   cursor: pointer;
+  height: 45px;
   left: 170px;
   padding: 2.5%;
   position: sticky;
   top: 16px;
   transition: $transition6 .2s;
-  width: 10%;
+  width: 45px;
   z-index: 1000;
 
   &__icon {
@@ -25,13 +26,14 @@
   background-color: $amareloPrimario;
   border-radius: $roundEdge;
   cursor: pointer;
+  height: 45px;
   left: 16px;
   padding: 2.5%;
   position: sticky;
   top: 16px;
   transform: rotateZ(360deg);
   transition: $transition6;
-  width: 10%;
+  width: 45px;
   z-index: 1000;
 
   &__icon {

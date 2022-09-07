@@ -2,6 +2,7 @@
 
 .home {
   @extend .sectionContainer;
+  top: 0;
 
   &__container {
     @extend .container;

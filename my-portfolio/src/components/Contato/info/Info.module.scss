@@ -1,0 +1,47 @@
+@import '../../../scss/styles.scss';
+
+.container {
+  @include alignItems-justifyContent(center, flex-start);
+  @include display-flexDirection(flex, row);
+  width: 100%;
+  &:first-of-type {
+    margin-top: $mt10;
+  }
+  &:last-of-type {
+    margin-bottom: $mb10;
+  }
+
+  &__boxIcon {
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, row);
+    @include height-width(50px, 50px);
+    border-radius: $roundEdge;
+    border: $borderIconContact;
+    margin-right: $mr5;
+    color: $cinzaBoxEducacao;
+  }
+
+  &__boxInfo {
+    width: calc(95% - 50px);
+    color: $cinzaBoxEducacao;
+    margin: 2.5% 0;
+
+    &___title {
+      @extend .titleh3;
+      color: $cinzaBoxEducacao;
+      font-weight: 600;
+    }
+
+    &___content {
+      @extend .content;
+      @include color-fontSize($cinzaBoxEducacao, 0.8rem);
+    }
+
+    //se dentro do meu boxInfo houver um paragrafo com um link:
+    & p a {
+      @extend .content;
+      @include color-fontSize($cinzaBoxEducacao, 0.8rem);
+      cursor: pointer;
+    }
+  }
+}

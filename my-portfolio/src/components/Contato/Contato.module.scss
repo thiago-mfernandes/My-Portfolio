@@ -7,6 +7,7 @@
   &__formBox {
     @include alignItems-justifyContent(center, center);
     @include display-flexDirection(flex, column);
+    margin-bottom: $mb10;
 
     &___title {
       @extend .titleh2;
@@ -14,7 +15,7 @@
     }
 
     &___form {
-      @include alignItems-justifyContent(center, center);
+      @include alignItems-justifyContent(flex-start, center);
       @include display-flexDirection(flex, column);
       width: 100%;
 
@@ -39,6 +40,11 @@
           color: $preto50;
           outline: none;
           padding-top: 10px;
+        }
+
+        &_____button {
+          @extend .button;
+          width: 40%;
         }
       }
     }

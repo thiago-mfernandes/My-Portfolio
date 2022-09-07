@@ -1,4 +1,6 @@
 import styles from './Contato.module.scss';
+import Info from './info';
+import data from 'data/contatoInfo.json';
 
 export default function Contato() {
   return (
@@ -10,7 +12,7 @@ export default function Contato() {
             <label 
               htmlFor='name' 
               className={styles.container__formBox___form____boxInput_____label}>
-                Name
+                Nome
             </label>
             <input 
               name='name' 
@@ -29,7 +31,7 @@ export default function Contato() {
             <input 
               name='email' 
               type='email' 
-              placeholder='Email..' 
+              placeholder='nome@dominio.com.br' 
               required 
               className={styles.container__formBox___form____boxInput_____input}
             />
@@ -65,48 +67,24 @@ export default function Contato() {
               rows={4}
             ></textarea>
           </div>
-          <input type='submit' value='Enviar'/>
+          <input type='submit' value='Enviar' className={styles.container__formBox___form____boxInput_____button}/>
         </form>
       </div>
 
       <div className={styles.container__socialMedia}>{/* container amarelo */}
-        <h2 className={styles.container__socialMedia___title}>Para falar comigo:</h2>
+        <h2 className={styles.container__socialMedia___title}>Vamos conversar?</h2>
         <p className={styles.container__socialMedia___content}>Tenho o bom e velho formulário, você já sabe como funciona: só preencher tudo e em breve respondeirei seu contato!</p>
-        <div>
-          <div>{/* div redonda para icone */}
-            <i>icone ilustrativo</i>
-          </div>
-          <div>{/*div com o texto */}
-            <span>Localização</span>
-            <p>Piracicaba - SP - Brazil</p>
-          </div>
-        </div>
-        <div>
-          <div>{/* div redonda para icone */}
-            <i>icone ilustrativo</i>
-          </div>
-          <div>{/*div com o texto */}
-            <span>Localização</span>
-            <p>Piracicaba - SP - Brazil</p>
-          </div>
-        </div>
-        <div>
-          <div>{/* div redonda para icone */}
-            <i>icone ilustrativo</i>
-          </div>
-          <div>{/*div com o texto */}
-            <span>Localização</span>
-            <p>Piracicaba - SP - Brazil</p>
-          </div>
-        </div><div>
-          <div>{/* div redonda para icone */}
-            <i>icone ilustrativo</i>
-          </div>
-          <div>{/*div com o texto */}
-            <span>Localização</span>
-            <p>Piracicaba - SP - Brazil</p>
-          </div>
-        </div>
+
+        {
+          data.map((item, index) => (
+            <Info 
+              key={index}
+              icon={item.icon}
+              title={item.title}
+              content={item.content}
+            />
+          ))
+        }
       </div>
     </section>
   );

@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "telefone",
+    "title": "Telefone",
+    "content": "+55 19 984009105"
+  },
+  {
+    "icon": "email",
+    "title": "Email",
+    "content": "falecomobranco@yahoo.com.br"
+  },
+  {
+    "icon": "local",
+    "title": "Localização",
+    "content": "Piracicaba - SP - Brasil"
+  },
+  {
+    "icon": "github",
+    "title": "GitHub",
+    "content": "github.com/thiago-mfernandes"
+  }
+]
