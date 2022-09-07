@@ -25,3 +25,12 @@ export interface IContatoInfo {
   title: string,
   content: string
 }
+
+export interface ItemPortfolio {
+  img: string,
+  alt: string,
+  href: string,
+  jobTitle: string,
+  title: string,
+  description: string,
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "img": "assets/dianita.jpeg",
+    "alt": "Capa do site da Diana COstura Criativa",
+    "href": "https://dianitacosturacriativa.com.br/",
+    "jobType": "Website",
+    "title": "Dianita Costura Criativa",
+    "description": "Construido a partir de um design-system feito por mim no Figma, utilizei Typescript, React e Sass. ALguns testes em Jest foram escritos e as animações foram implementadas utilizando a biblioteca Framer-Motion"
+  },
+  {
+    "img": "assets/hs.jpeg",
+    "alt": "Capa do Site da Helou Sourcing",
+    "href": "http://helousourcing.com/",
+    "jobType": "Website",
+    "title": "Helou Sourcing",
+    "description": "Feito com React.Js, implementei o site em dois idiomas utilizando Context e Hooks."
+  },
+  {
+    "img": "assets/emailvalidadejuridica.jpeg",
+    "alt": "Capa do Site da Email Validade Juridica",
+    "href": "https://emailvalidadejuridica.com.br/",
+    "jobType": "Website",
+    "title": "Email Validade Jurídica",
+    "description": "Projeto desenvolvido utilizando um template fornecido pelo cliente e adequado as necessidades do mesmo. Feito em React.Js"
+  }
+]
