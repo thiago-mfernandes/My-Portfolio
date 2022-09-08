@@ -97,6 +97,11 @@
 
     &___button {
       @extend .button;
+
+      & a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 }

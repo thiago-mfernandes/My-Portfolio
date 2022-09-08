@@ -46,9 +46,16 @@
       }
     }
 
-    &__btn {
-      @extend .buttonPortfolio;
-      margin-top: $mt10;
+    &___link {
+      @include display-flexDirection(flex, row);
+      color: $amareloPrimario;
+      text-decoration: none;
+      width: 100%;
+      
+      &____btn {
+        @extend .buttonPortfolio;
+        margin-top: $mt10;
+      }
     }
   }
 }

@@ -42,7 +42,9 @@ function Menu() {
           </ul>
         </nav>
         <div className={styles.menu__container}>
-          <button className={styles.menu__container___button}>Baixar Currículo</button>
+          <button className={styles.menu__container___button}>
+            <a href='curriculo.zip' download='curriculo.zip' type='application/zip'>Baixar Currículo</a>
+          </button>
           <button className={styles.menu__container___button}>Contratar</button>
         </div>
       </aside>

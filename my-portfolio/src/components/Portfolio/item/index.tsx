@@ -12,8 +12,15 @@ export default function Item({img, alt, href, jobTitle, title, description}:Item
         <h2 className={styles.container__containerTitle__title}>{title}</h2>
         <div className={styles.container__containerTitle__contentBox}>
           <p className={styles.containerTitle__contentBox___content}>{description}</p>
-        </div>
-        <button className={styles.container__containerTitle__btn}>Ver Portfolio</button>
+        </div>        
+        <a 
+          href={href} 
+          target="_blank" 
+          rel="noreferrer"  
+          className={styles.container__containerTitle___link}
+        >
+          <button className={styles.container__containerTitle___link____btn}>Ver Portfolio</button>
+        </a>
       </div>
     </div>
   );
