@@ -34,3 +34,10 @@ export interface ItemPortfolio {
   title: string,
   description: string,
 }
+
+export interface NavItens {
+  title: string,
+  href: string,
+  state: boolean,
+  setState: React.Dispatch<React.SetStateAction<boolean>>
+}

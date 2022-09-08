@@ -2,6 +2,8 @@ import { memo, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import styles from './Menu.module.scss';
+import nav from 'data/nav.json';
+import Item from './Item';
 
 function Menu() {
 
@@ -33,12 +35,17 @@ function Menu() {
         </div>
         <nav className={styles.nav}>
           <ul className={styles.nav__list}>
-            <li className={styles.nav__list___item}>Home</li>
-            <li className={styles.nav__list___item}>Sobre</li>
-            <li className={styles.nav__list___item}>Portfolio</li>
-            <li className={styles.nav__list___item}>Educação</li>
-            <li className={styles.nav__list___item}>Experiencia</li>
-            <li className={styles.nav__list___item}>Contato</li>
+            {
+              nav.map((item, index) => (
+                <Item 
+                  state={menuMobileState}
+                  setState={setMenuMobileState}
+                  key={index} 
+                  href={item.href} 
+                  title={item.title} 
+                />
+              ))
+            }
           </ul>
         </nav>
         <div className={styles.menu__container}>

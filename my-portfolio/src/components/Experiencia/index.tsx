@@ -4,7 +4,7 @@ import experiences from 'data/experience.json';
 
 export default function Experiencia() {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id='experiencia'>
       <hr className={styles.container__line}/>
       <div className={styles.container__boxTitle}>
         <span className={styles.container__boxTitle___subtitle}>Experiência</span>

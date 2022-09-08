@@ -5,7 +5,7 @@ import stacks from 'data/stacks.json';
 export default function Sobre() {
   return (
     <>
-      <section className={styles.about}>
+      <section className={styles.about} id='sobre'>
         <hr className={styles.about__line}/>
         <div className={styles.about__container}>
           <h2 className={styles.about__container___title}>

@@ -4,7 +4,7 @@ import Item from './item';
 
 export default function Portfolio() {
   return (
-    <section className={styles.home}> 
+    <section className={styles.home} id='portfolio'> 
       <img 
         src="assets/campeao.jpeg" 
         alt="Foto Pessoal Thiago" 

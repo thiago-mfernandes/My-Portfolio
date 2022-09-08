@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Portfolio",
+    "href": "#portfolio"
+  },
+  {
+    "title": "Sobre",
+    "href": "#sobre"
+  },
+  {
+    "title": "Educação",
+    "href": "#educacao"
+  },
+  {
+    "title": "Experiência",
+    "href": "#experiencia"
+  },
+  {
+    "title": "Contato",
+    "href": "#contato"
+  }
+]
