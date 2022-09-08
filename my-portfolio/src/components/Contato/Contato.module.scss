@@ -4,6 +4,10 @@
   @extend .sectionContainer;
   margin-top: $mt20;
 
+  &__line {
+    @extend .line;
+  }
+
   &__formBox {
     @include alignItems-justifyContent(center, center);
     @include display-flexDirection(flex, column);

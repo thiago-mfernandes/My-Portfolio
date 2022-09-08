@@ -3,6 +3,10 @@
 .container {
   @extend .sectionContainer;
 
+  &__line {
+    @extend .line;
+  }
+
   &__boxTitle {
     @extend .container;
     align-items: flex-start;

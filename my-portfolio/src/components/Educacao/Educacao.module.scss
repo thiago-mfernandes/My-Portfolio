@@ -3,6 +3,10 @@
 .educacao {
   @extend .sectionContainer;
 
+  &__line {
+    @extend .line;
+  }
+
   &__box {
     @extend .container;
     align-items: flex-start;

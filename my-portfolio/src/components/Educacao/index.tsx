@@ -14,8 +14,8 @@ export default function Educacao() {
   return (
     <>
       <section className={styles.educacao}>
+        <hr className={styles.educacao__line}/>
         <div className={styles.educacao__box}>
-
           <h3 className={styles.educacao__box___subtitle}>Educação</h3>
           <h2 className={styles.educacao__box___title}>Formação Acadêmica</h2>
 

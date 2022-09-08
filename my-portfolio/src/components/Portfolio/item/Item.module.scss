@@ -4,7 +4,7 @@
   @extend .container;
   overflow-x: hidden;
 
-  &___img {
+  & a img {
     width: 100%;
   }
 
@@ -13,18 +13,18 @@
     @include display-flexDirection(flex, column);
     padding: 20% 10%;
 
-    &___content {
+    &__content {
       @extend .content;
       font-size: 1rem;
       text-transform: uppercase;
     }
 
-    &___title {
+    &__title {
       @extend .titleh2;
       margin-bottom: $mb20;
     }
 
-    &___contentBox {
+    &__contentBox {
       padding-left: $pl10;
       position: relative;
 
@@ -39,15 +39,16 @@
         background: #f3c623;
       }
 
-      &____content {
+      &___content {
         @extend .content;
         font-size: 1rem;
         margin-bottom: $mb10;
       }
     }
 
-    &___btn {
+    &__btn {
       @extend .buttonPortfolio;
+      margin-top: $mt10;
     }
   }
 }

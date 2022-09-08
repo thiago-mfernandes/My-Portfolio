@@ -3,8 +3,8 @@
 .about {
   @extend .sectionContainer;
 
-  &__imgAbout {
-    width: 100%;
+  &__line {
+    @extend .line;
   }  
 
   &__container {

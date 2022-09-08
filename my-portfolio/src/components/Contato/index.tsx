@@ -5,6 +5,7 @@ import data from 'data/contatoInfo.json';
 export default function Contato() {
   return (
     <section className={styles.container}>
+      <hr className={styles.container__line}/>
       <div className={styles.container__formBox}>
         <h2 className={styles.container__formBox___title}>Entre em Contato</h2>
         <form action="" className={styles.container__formBox___form}>

@@ -5,6 +5,7 @@ import experiences from 'data/experience.json';
 export default function Experiencia() {
   return (
     <section className={styles.container}>
+      <hr className={styles.container__line}/>
       <div className={styles.container__boxTitle}>
         <span className={styles.container__boxTitle___subtitle}>Experiência</span>
         <h2 className={styles.container__boxTitle___title}>Minhas Experiências de Trabalho</h2>

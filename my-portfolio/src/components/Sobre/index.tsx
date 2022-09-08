@@ -6,10 +6,10 @@ export default function Sobre() {
   return (
     <>
       <section className={styles.about}>
-        <img src={Me} alt="Foto do campeao" className={styles.about__imgAbout}/>
+        <hr className={styles.about__line}/>
         <div className={styles.about__container}>
           <h2 className={styles.about__container___title}>
-            Seja bem vindo!<br /> Meu nome é <span className={styles.about__container___title}>
+            <br /> Meu nome é <span className={styles.about__container___title}>
               Thiago Fernandes </span>
               e sou Desenvolvedor Front-End especializado em React!
           </h2>

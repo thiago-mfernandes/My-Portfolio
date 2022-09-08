@@ -7,13 +7,13 @@ export default function Item({img, alt, href, jobTitle, title, description}:Item
       <a href={href} target="_blank" rel="noreferrer">
         <img src={img} alt={alt} className={styles.container___img}/>
       </a>
-      <div className={styles.containerTitle}>
-        <span className={styles.containerTitle___content}>{jobTitle}</span>
-        <h2 className={styles.containerTitle___title}>{title}</h2>
-        <div className={styles.containerTitle___contentBox}>
-          <p className={styles.containerTitle___contentBox____content}>{description}</p>
+      <div className={styles.container__containerTitle}>
+        <span className={styles.container__containerTitle__content}>{jobTitle}</span>
+        <h2 className={styles.container__containerTitle__title}>{title}</h2>
+        <div className={styles.container__containerTitle__contentBox}>
+          <p className={styles.containerTitle__contentBox___content}>{description}</p>
         </div>
-        <button className={styles.containerTitle___btn}>Ver Portfolio</button>
+        <button className={styles.container__containerTitle__btn}>Ver Portfolio</button>
       </div>
     </div>
   );
