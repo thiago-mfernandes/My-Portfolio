@@ -4,6 +4,7 @@ import { GrClose } from 'react-icons/gr';
 import styles from './Menu.module.scss';
 import nav from 'data/nav.json';
 import Item from './Item';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 function Menu() {
 
@@ -52,7 +53,9 @@ function Menu() {
           <button className={styles.menu__container___button}>
             <a href='curriculo.zip' download='curriculo.zip' type='application/zip'>Baixar Currículo</a>
           </button>
-          <button className={styles.menu__container___button}>Contratar</button>
+          <button className={styles.menu__container___button} onClick={() => setMenuMobileState(false)}>
+            <AnchorLink href="#contato">Contratar</AnchorLink>
+          </button>
         </div>
       </aside>
     </>

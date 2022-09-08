@@ -1,10 +1,16 @@
 import styles from './Home.module.scss';
 import portfolio from 'data/portfolio.json';
 import Item from './item';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Portfolio() {
   return (
     <section className={styles.home} id='portfolio'> 
+      <button className={styles.home__whatsApp}>
+        <a href=""  className={styles.home__whatsApp___link}>
+          <FaWhatsapp  className={styles.home__whatsApp___link____icon}/>
+        </a>
+      </button>
       <img 
         src="assets/campeao.jpeg" 
         alt="Foto Pessoal Thiago" 

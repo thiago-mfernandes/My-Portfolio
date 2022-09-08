@@ -3,6 +3,29 @@
 .home {
   @extend .sectionContainer;
 
+  &__whatsApp {
+    @include alignItems-justifyContent(center, center);
+    @include display-flexDirection(flex, row);
+    @include height-width(50px, 50px);
+    background-color: $whatsApp;
+    border-radius: $roundEdge;
+    border: none;
+    box-shadow: $boxShadow-whats;
+    position: fixed;
+    bottom: 24px;
+    right: 26px;
+    z-index: 10;
+
+    &___link {
+      @include alignItems-justifyContent(center, center);
+      @include display-flexDirection(flex, row);
+      width: 100%;
+      &____icon {
+        @include color-fontSize($branco, 1.75rem);
+      }
+    }
+  }
+
   &__img {
     width: 100%;
     margin-bottom: $mb20;
