@@ -43,7 +43,7 @@
           border-bottom: $borderBoxs;
           color: $preto50;
           outline: none;
-          padding-top: 10px;
+          padding-top: 10px;          
         }
 
         &_____button {
@@ -75,3 +75,13 @@
     }
   }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow:0 0 0 50px $cinzaBoxEducacao inset !important;
+  -webkit-text-fill-color: $preto50;
+}
+
+

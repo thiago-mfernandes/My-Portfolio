@@ -1,8 +1,50 @@
 import styles from './Contato.module.scss';
 import Info from './info';
 import data from 'data/contatoInfo.json';
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Contato() {
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [showStatusMessage, setShowStatusMessage] = useState(false);
+
+  
+  //obter os dados do formulario e enviar ao back-end
+  function handleFormSubmit( event: React.FormEvent<HTMLFormElement> ) {
+    
+    event.preventDefault();
+
+    const data = {
+      name: name,
+      email: email,
+      subject: subject,
+      message: message
+    };
+
+    axios.post('http://localhost:5000/sendEmail', data, {
+      headers: {
+        'Content-TYpe': 'application/json'
+      }
+    })
+      .then(res => console.log(`Mensagem do Frontend? : ${res.data}`));
+    //aqui eu pego a resposta que esta vindo do backend
+  }
+
+  //exibir mensagem de status enviado ou nao enviado
+  function handleShowStatusMessage() {
+    setTimeout(() => {
+      setShowStatusMessage(true);
+    }, 1);
+    setTimeout(() => {
+      setShowStatusMessage(false);
+    }, 5000);
+  }
+
+
   return (
     <section className={styles.container} id='contato'>
       <div className={styles.container__formBox}>
@@ -23,7 +65,17 @@ export default function Contato() {
           }
         </div>
       </div>
-      <form action="" className={styles.container__formBox___form}>
+
+
+
+
+
+      <form 
+        className={styles.container__formBox___form}
+        action="/sendEmail" 
+        method='POST'
+        onSubmit={handleFormSubmit}
+      >
         <div className={styles.container__formBox___form____boxInput}>
           <label 
             htmlFor='name' 
@@ -36,6 +88,7 @@ export default function Contato() {
             placeholder='Nome..' 
             required
             className={styles.container__formBox___form____boxInput_____input}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -50,6 +103,7 @@ export default function Contato() {
             placeholder='nome@dominio.com.br' 
             required 
             className={styles.container__formBox___form____boxInput_____input}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -64,6 +118,7 @@ export default function Contato() {
             placeholder='Assunto..' 
             required 
             className={styles.container__formBox___form____boxInput_____input}
+            onChange={(e) => setSubject(e.target.value)}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -81,10 +136,15 @@ export default function Contato() {
             maxLength={250}
             cols={30}
             rows={4}
+            onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
         <input type='submit' value='Enviar' className={styles.container__formBox___form____boxInput_____button}/>
       </form>
+
+
+
+
     </section>
   );
 }
