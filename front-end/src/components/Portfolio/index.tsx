@@ -7,8 +7,13 @@ export default function Portfolio() {
   return (
     <section className={styles.home} id='portfolio'> 
       <button className={styles.home__whatsApp}>
-        <a href=""  className={styles.home__whatsApp___link}>
-          <FaWhatsapp  className={styles.home__whatsApp___link____icon}/>
+        <a 
+          href="https://wa.me/5519984009105"
+          target="_blank"
+          rel="noreferrer"  
+          className={styles.home__whatsApp___link}
+        >
+          <FaWhatsapp className={styles.home__whatsApp___link____icon}/>
         </a>
       </button>
       <img 
