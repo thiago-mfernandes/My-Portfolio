@@ -14,6 +14,13 @@ export default function Contato() {
   const [message, setMessage] = useState('');
   const [showStatusMessage, setShowStatusMessage] = useState(false);
 
+
+  function cleanForm() {
+    setName('');
+    setEmail('');
+    setSubject('');
+    setMessage('');
+  }
   
   //obter os dados do formulario e enviar ao back-end
   function handleFormSubmit( event: React.FormEvent<HTMLFormElement> ) {
@@ -27,6 +34,7 @@ export default function Contato() {
       message: message
     };
     sendMessage(data);
+    cleanForm();
   }
 
   async function sendMessage(data:DataForm) {
@@ -56,7 +64,6 @@ export default function Contato() {
       setShowStatusMessage(false);
     }, 5000);
   }
-
 
   return (
     <section className={styles.container} id='contato'>
@@ -98,6 +105,7 @@ export default function Contato() {
             required
             className={styles.container__formBox___form____boxInput_____input}
             onChange={(e) => setName(e.target.value)}
+            value={name}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -113,6 +121,7 @@ export default function Contato() {
             required 
             className={styles.container__formBox___form____boxInput_____input}
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -128,6 +137,7 @@ export default function Contato() {
             required 
             className={styles.container__formBox___form____boxInput_____input}
             onChange={(e) => setSubject(e.target.value)}
+            value={subject}
           />
         </div>
         <div className={styles.container__formBox___form____boxInput}>
@@ -146,6 +156,7 @@ export default function Contato() {
             cols={30}
             rows={4}
             onChange={(e) => setMessage(e.target.value)}
+            value={message}
           ></textarea>
         </div>
         {showStatusMessage && <MessageStatus />}
