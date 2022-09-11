@@ -3,6 +3,8 @@ import Info from './info';
 import data from 'data/contatoInfo.json';
 import { useState } from 'react';
 import axios from 'axios';
+import { DataForm } from 'Types/types';
+import MessageStatus from './MessageStatus';
 
 export default function Contato() {
 
@@ -18,20 +20,31 @@ export default function Contato() {
     
     event.preventDefault();
 
-    const data = {
+    const data: DataForm = {
       name: name,
       email: email,
       subject: subject,
       message: message
     };
+    sendMessage(data);
+  }
 
-    axios.post('http://localhost:5000/sendEmail', data, {
-      headers: {
-        'Content-TYpe': 'application/json'
-      }
-    })
-      .then(res => console.log(`Mensagem do Frontend? : ${res.data}`));
-    //aqui eu pego a resposta que esta vindo do backend
+  async function sendMessage(data:DataForm) {
+    try {
+      axios.post('http://localhost:5000/sendEmail', data, {
+        headers: {
+          'Content-TYpe': 'application/json'
+        }
+      })
+        .then(res => 
+          res.status == 200
+            ? handleShowStatusMessage() 
+            : setShowStatusMessage(false)
+        );
+    } 
+    catch (error) {
+      console.error(error);
+    }   
   }
 
   //exibir mensagem de status enviado ou nao enviado
@@ -65,10 +78,6 @@ export default function Contato() {
           }
         </div>
       </div>
-
-
-
-
 
       <form 
         className={styles.container__formBox___form}
@@ -139,6 +148,7 @@ export default function Contato() {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
+        {showStatusMessage && <MessageStatus />}
         <input type='submit' value='Enviar' className={styles.container__formBox___form____boxInput_____button}/>
       </form>
 

@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-async function sendEmail(req, res) {
+function sendEmail(req, res) {
 
   try {
 
@@ -50,17 +50,17 @@ async function sendEmail(req, res) {
   }
 }
 
-//vou utilizar a porta http://locahost:5000/sendEmail para ouvir o frontend do axios
-//la ele aponta pra cá: axios.post('http://localhost:5000/sendEmail', data,......
-
-app.get('/server', (req, res) => {
-  return res.json({message: 'okay'})
+app.use('/teste', (req, res) => {
+  return res.json('signup')
 })
 
-//
+//vou utilizar a porta http://locahost:5000/sendEmail para ouvir o frontend do axios
+//la ele aponta pra cá: axios.post('http://localhost:5000/sendEmail', data,......
 app.post('/sendEmail', sendEmail);
 
+
+
 //ouvindo na porta 5000
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server online at port ${process.env.PORT}`)
 })

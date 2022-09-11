@@ -41,3 +41,10 @@ export interface NavItens {
   state: boolean,
   setState: React.Dispatch<React.SetStateAction<boolean>>
 }
+
+export interface DataForm {
+  name: string,
+  email: string,
+  subject: string
+  message: string
+}

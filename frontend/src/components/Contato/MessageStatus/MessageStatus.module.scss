@@ -1,0 +1,17 @@
+@import "../../../scss/styles.scss";
+
+.container {
+  @include display-flexDirection(flex, row);
+  @include alignItems-justifyContent(center, center);
+  border: 1px solid $success;
+  background-color: $whatsApp20;
+  margin-bottom: $mb7;
+  opacity: 0.8;
+  width: 100%;
+
+  &__span {
+    color: $success;
+    width: 100%;
+    padding: 2.5%;
+  }
+}

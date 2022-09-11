@@ -4,13 +4,12 @@
 
 Criar uma api
 
-- [] Iiciar o projeto com `npm init -y`
-- [] Install the dependencies: `npm i express nodemon cors axios`
-- [] Criar uma rota para acessar a API
-- [] Servir a API
-- [] Habilitar o CORS 
-    o cors permite que a url seja acessada de outros locais
-- [] Habilitar o nodemon para reiniciar o server
+- [x] Iniciar o projeto com `npm init -y`
+- [x] Instalar as dependências: `npm i express nodemon cors axios`
+- [x] Criar uma rota para acessar a API
+- [x] Servir a API
+- [x] Habilitar o CORS // o cors permite que a url seja acessada de outros locais
+- [x] Habilitar o nodemon para reiniciar o server
 
 ## Front-End
 Consumir API
